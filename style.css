@@ -1,50 +1,95 @@
 @font-face {
-  font-family: 'gulax regular';
-  src: url("fonts/Gulax-Regular.otf");
+  font-family: 'mononoki Nerd Font Mono';
+  src: url('fonts/mononoki_nf/mononokiNerdFontCompleteM-Regular.woff2') format('woff2'),
+      url('fonts/mononoki_nf/mononokiNerdFontCompleteM-Regular.woff') format('woff'),
+      url('fonts/mononoki_nf/mononokiNerdFontCompleteM-Regular.svg#mononokiNerdFontCompleteM-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-  font-family: 'compagnon medium';
-  src: url("fonts/Compagnon-Medium.otf");
+  font-family: 'mononoki Nerd Font';
+  src: url('fonts/mononoki_nf/mononokiNerdFontComplete-Regular.woff2') format('woff2'),
+      url('fonts/mononoki_nf/mononokiNerdFontComplete-Regular.woff') format('woff'),
+      url('fonts/mononoki_nf/mononokiNerdFontComplete-Regular.svg#mononokiNerdFontComplete-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-  font-family: 'compagnon roman';
-  src: url("fonts/Compagnon-Roman.otf");
+  font-family: 'mononoki Nerd Font Mono';
+  src: url('fonts/mononoki_nf/mononokiNerdFontCompleteM-Italic.woff2') format('woff2'),
+      url('fonts/mononoki_nf/mononokiNerdFontCompleteM-Italic.woff') format('woff'),
+      url('fonts/mononoki_nf/mononokiNerdFontCompleteM-Italic.svg#mononokiNerdFontCompleteM-Italic') format('svg');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
 }
-
 
 @font-face {
-  font-family: 'compagnon light';
-  src: url("fonts/Compagnon-Light.otf");
+  font-family: 'mononoki Nerd Font';
+  src: url('fonts/mononoki_nf/mononokiNerdFontComplete-Italic.woff2') format('woff2'),
+      url('fonts/mononoki_nf/mononokiNerdFontComplete-Italic.woff') format('woff'),
+      url('fonts/mononoki_nf/mononokiNerdFontComplete-Italic.svg#mononokiNerdFontComplete-Italic') format('svg');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
 }
-
 
 @font-face {
-  font-family: 'mononoki regular';
-  src: url("fonts/mononoki-Regular.woff");
+  font-family: 'mononoki Nerd Font Mono';
+  src: url('fonts/mononoki_nf/mononokiNerdFontCompleteM-Bold.woff2') format('woff2'),
+      url('fonts/mononoki_nf/mononokiNerdFontCompleteM-Bold.woff') format('woff'),
+      url('fonts/mononoki_nf/mononokiNerdFontCompleteM-Bold.svg#mononokiNerdFontCompleteM-Bold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'mononoki Nerd Font';
+  src: url('fonts/mononoki_nf/mononokiNerdFontComplete-Bold.woff2') format('woff2'),
+      url('fonts/mononoki_nf/mononokiNerdFontComplete-Bold.woff') format('woff'),
+      url('fonts/mononoki_nf/mononokiNerdFontComplete-Bold.svg#mononokiNerdFontComplete-Bold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --accent-color: rgb(209, 0, 0);
+  --accent-color-semi: rgba(209, 0, 0, 0.6);
 }
 
 
-.header1 {
-  text-align: center;
-  font-family: 'compagnon medium';
-  font-size: 70px;
-  margin: 0px;
-}
-
-@media only screen and (max-width: 800px) {
-  .header1 {
-    font-size: 50px;
-  }
+html {
+  background-color: black;
+  color: white;
 }
 
 body {
-  scroll-behavior: smooth;
-  background-color: black;
-  color: white;
-  font-size: 20px;
-  padding-bottom: 512px;
+  font-family: 'mononoki Nerd Font';
+}
+
+a {
+  color: inherit;
+}
+
+::selection {
+  background: var(--accent-color-semi);
+}
+
+
+.main-header {
+  font-family: 'mononoki Nerd Font Mono';
+  text-align: center;
+  font-size: 50px;
+  letter-spacing: 10px;
+
+  margin: 0px;
+  padding: 20px;
 }
 
 
@@ -55,125 +100,149 @@ body {
   clear: both;
 }
 
-.row.center {
-  text-align: center;
+
+.nav-center {
+  margin: 0px;
+  content: "";
   display: block;
+  text-align: center;
+  clear: both;
+
+  border-top-style: solid;
+  border-top-width: 2px;  
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-color: var(--accent-color);
+
 }
 
+.nav-lefgt {
+  margin: 0px;
+  content: "";
+  display: block;
+  text-align: left;
+  clear: both;
+}
 
-.nav_it {
-  font-family: 'compagnon roman';
+.nav-item {
+  display: inline-block;
+  font-family: 'mononoki Nerd Font Mono';
   font-size: 30px;
   margin: 0px;
-  padding-left: 20px;
-  padding-right: 20px;
   padding-top: 5px;
   padding-bottom: 5px;
-  word-break: keep-all;
-  display: inline-block;
-  height: fit-content;
-  border-width: 0px;
-  border-radius: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav-item.active {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+.nav-item:hover {
+  background-color: white;
+  color: black;
+}
+
+.nav-item.active:hover {
+  background-color: var(--accent-color);
+  color: white;
 }
 
 
-.nav_it.active {
-  background-color: rgb(255, 104, 4);
-}
-
-.nav_it.noactive:hover {
-  background-color: rgb(63, 190, 37);
-}
-
-.half_column {
+.column-50 {
   float:left;
   width:50%;
 }
 
-
-.third_column {
-  float:left;
-  width:33.33%;
+.column-25 {
+  float: left;
+  width: 25%;
 }
 
-.two_third_column {
-  float:left;
-  width: 66.66%;
-}
-
-.quad_column {
-  float:left;
-  width:25%;
-}
-
-.three_quad_column {
-  float:left;
-  width:75%;
+.column-25l {
+  float: left;
+  width: 25%;
 }
 
 
-@media only screen and (max-width: 800px) {
-  .half_column {
-    width:100%;
+.column-75 {
+  float: left;
+  width: 75%;
+}
+
+.column-75s {
+  float: left;
+  width: 75%;
+}
+
+@media screen and (max-width: 600px) {
+  .column-50 {
+    width: 100%;
+  }
+  
+  .column-25 {
+    width: 50%;
   }
 
-  .two_third_column {
+  .column-25l {
+    width: 100%;
+  }
+  
+  .column-75 {
     width: 100%;
   }
 
-  .three_quad_column {
-    width: 100%;
-  }
-
-  .third_column {
-    width: 100%;
-  }
-
-  .quad_column {
-    width: 100%;
+  .column-75s {
+    float: left;
+    width: 50%;
   }
 }
 
-
-.full_width {
-  width: 100%;
-}
-
-
-.block {
+.block-padding-2 {
   width: 96%;
-  margin: 2%;
-  font-family: 'compagnon light';
+  padding-top: 5px;
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-bottom: 5px;
   text-align: justify;
-  white-space: pre-line;
 }
 
-.center {
-  justify-content: center;
-}
+.h-padding-2 {
+  width: 96%;
+  margin: 0%;
+  padding-top: 5px;
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-bottom: 0px;
+} 
 
-.block_code {
-  width: 95%;
-  margin: 2%;
-  padding-left: 1%;
-  font-family: 'mononoki regular';
-  text-align: justify;
-  white-space: pre-line;
-  border-left: solid;
-}
-
-.footer {
-  padding-top: 64px;
-  font-family: 'compagnon roman';
-  font-size: 15px;
+.h-padding-2.center {
   text-align: center;
 }
 
-.block_youtube {
-  width: 95%;
-  margin: 2%;
+.h-padding-2.right {
+  text-align: right;
 }
 
-a {
-  color:inherit;
+
+.justify {
+  text-align: justify;
+}
+
+
+.footer {
+  border-top-color: var(--accent-color);
+  border-top-style: solid;
+  border-top-width: 2px;
+  text-align: center;
+}
+
+img {
+  width: 100%;
+  background: transparent;
+  color: white;
 }
