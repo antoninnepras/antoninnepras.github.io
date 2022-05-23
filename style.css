@@ -1,0 +1,179 @@
+@font-face {
+  font-family: 'gulax regular';
+  src: url("fonts/Gulax-Regular.otf");
+}
+
+@font-face {
+  font-family: 'compagnon medium';
+  src: url("fonts/Compagnon-Medium.otf");
+}
+
+@font-face {
+  font-family: 'compagnon roman';
+  src: url("fonts/Compagnon-Roman.otf");
+}
+
+
+@font-face {
+  font-family: 'compagnon light';
+  src: url("fonts/Compagnon-Light.otf");
+}
+
+
+@font-face {
+  font-family: 'mononoki regular';
+  src: url("fonts/mononoki-Regular.woff");
+}
+
+
+.header1 {
+  text-align: center;
+  font-family: 'compagnon medium';
+  font-size: 70px;
+  margin: 0px;
+}
+
+@media only screen and (max-width: 800px) {
+  .header1 {
+    font-size: 50px;
+  }
+}
+
+body {
+  scroll-behavior: smooth;
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  padding-bottom: 512px;
+}
+
+
+.row {
+  margin: 0px;
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.row.center {
+  text-align: center;
+  display: block;
+}
+
+
+.nav_it {
+  font-family: 'compagnon roman';
+  font-size: 30px;
+  margin: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  word-break: keep-all;
+  display: inline-block;
+  height: fit-content;
+  border-width: 0px;
+  border-radius: 10px;
+}
+
+
+.nav_it.active {
+  background-color: rgb(255, 104, 4);
+}
+
+.nav_it.noactive:hover {
+  background-color: rgb(63, 190, 37);
+}
+
+.half_column {
+  float:left;
+  width:50%;
+}
+
+
+.third_column {
+  float:left;
+  width:33.33%;
+}
+
+.two_third_column {
+  float:left;
+  width: 66.66%;
+}
+
+.quad_column {
+  float:left;
+  width:25%;
+}
+
+.three_quad_column {
+  float:left;
+  width:75%;
+}
+
+
+@media only screen and (max-width: 800px) {
+  .half_column {
+    width:100%;
+  }
+
+  .two_third_column {
+    width: 100%;
+  }
+
+  .three_quad_column {
+    width: 100%;
+  }
+
+  .third_column {
+    width: 100%;
+  }
+
+  .quad_column {
+    width: 100%;
+  }
+}
+
+
+.full_width {
+  width: 100%;
+}
+
+
+.block {
+  width: 96%;
+  margin: 2%;
+  font-family: 'compagnon light';
+  text-align: justify;
+  white-space: pre-line;
+}
+
+.center {
+  justify-content: center;
+}
+
+.block_code {
+  width: 95%;
+  margin: 2%;
+  padding-left: 1%;
+  font-family: 'mononoki regular';
+  text-align: justify;
+  white-space: pre-line;
+  border-left: solid;
+}
+
+.footer {
+  padding-top: 64px;
+  font-family: 'compagnon roman';
+  font-size: 15px;
+  text-align: center;
+}
+
+.block_youtube {
+  width: 95%;
+  margin: 2%;
+}
+
+a {
+  color:inherit;
+}
