@@ -93,6 +93,14 @@ a {
 }
 
 
+@media screen and (max-width: 600px) {
+  .main-header {
+    font-size: 30px;
+    letter-spacing: 5px;
+  }
+}
+
+
 .row {
   margin: 0px;
   content: "";
@@ -113,8 +121,8 @@ a {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-color: var(--accent-color);
-
 }
+
 
 .nav-lefgt {
   margin: 0px;
@@ -135,6 +143,17 @@ a {
   padding-right: 15px;
   text-decoration: none;
   color: inherit;
+}
+
+
+@media screen and (max-width: 600px) {
+  .nav-center {
+    width: 100%;
+  }
+
+  .nav-item {
+    display: block;
+  }
 }
 
 .nav-item.active {
