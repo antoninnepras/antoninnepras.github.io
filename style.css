@@ -252,6 +252,10 @@ a {
   text-align: justify;
 }
 
+.center {
+  text-align: center;
+}
+
 
 .footer {
   border-top-color: var(--accent-color);
