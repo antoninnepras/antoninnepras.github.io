@@ -58,6 +58,26 @@
   font-display: swap;
 }
 
+@keyframes black-to-white {
+  0% {
+    color: black;
+  }
+
+  100% {
+    color: white;
+  }
+}
+
+@keyframes transp-to-visible {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 :root {
   --accent-color: rgb(209, 0, 0);
   --accent-color-semi: rgba(209, 0, 0, 0.6);
@@ -71,6 +91,15 @@ html {
 
 body {
   font-family: 'mononoki Nerd Font';
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    padding-left: 1%;
+    padding-right: 1%;
+  }
 }
 
 a {
@@ -90,6 +119,12 @@ a {
 
   margin: 0px;
   padding: 20px;
+
+  transition: transform 1s;
+}
+
+.main-header:hover {
+  transform: scale(110%);
 }
 
 
@@ -121,6 +156,7 @@ a {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-color: var(--accent-color);
+  transition: border ease-in 1s;
 }
 
 
@@ -143,6 +179,7 @@ a {
   padding-right: 15px;
   text-decoration: none;
   color: inherit;
+  transition: color 1s ease-out 0.1s;
 }
 
 
@@ -228,6 +265,8 @@ a {
   padding-right: 2%;
   padding-bottom: 5px;
   text-align: justify;
+  
+  animation: 2s ease-out 0s 1 transp-to-visible;
 }
 
 .h-padding-2 {
@@ -237,6 +276,8 @@ a {
   padding-left: 2%;
   padding-right: 2%;
   padding-bottom: 0px;
+
+  animation: 4s ease-out 0s 1 transp-to-visible;
 } 
 
 .h-padding-2.center {
@@ -258,14 +299,22 @@ a {
 
 
 .footer {
+  margin-top: 64px;
   border-top-color: var(--accent-color);
   border-top-style: solid;
   border-top-width: 2px;
   text-align: center;
 }
 
+
+
 img {
   width: 100%;
   background: transparent;
-  color: white;
+  opacity: 1;
+  transition: 1s;
+}
+
+img:hover {
+  transform: rotate(360deg);
 }
