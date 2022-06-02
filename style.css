@@ -180,6 +180,7 @@ a {
   text-decoration: none;
   color: inherit;
   transition: color 1s ease-out 0.1s;
+  transition: background-color 1s ease-out 0.1s;
 }
 
 
@@ -306,15 +307,40 @@ a {
   text-align: center;
 }
 
-
-
 img {
   width: 100%;
   background: transparent;
   opacity: 1;
-  transition: 1s;
+  transition: transform 1s;
 }
 
 img:hover {
   transform: rotate(360deg);
+}
+
+
+
+.reveal-left{
+  position: relative;
+  transform: translateX(-2000px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.reveal-left.active{
+  transform: translateX(0);
+  opacity: 1;
+}
+
+
+.reveal-right{
+  position: relative;
+  transform: translateX(2000px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.reveal-right.active{
+  transform: translateX(0);
+  opacity: 1;
 }
