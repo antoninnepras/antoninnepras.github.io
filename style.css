@@ -93,6 +93,7 @@ body {
   font-family: 'mononoki Nerd Font';
   padding-left: 10%;
   padding-right: 10%;
+  margin-bottom: 500px;
 }
 
 @media screen and (max-width: 600px) {
@@ -300,6 +301,7 @@ a {
 
 
 .footer {
+  width: 100%;
   margin-top: 64px;
   border-top-color: var(--accent-color);
   border-top-style: solid;
@@ -311,36 +313,56 @@ img {
   width: 100%;
   background: transparent;
   opacity: 1;
-  transition: transform 1s;
-}
-
-img:hover {
-  transform: rotate(360deg);
 }
 
 
 
-.reveal-left{
+
+.reveal-left {
   position: relative;
-  transform: translateX(-2000px);
+  transform: translateX(-20%);
   opacity: 0;
   transition: 1s all ease;
 }
 
-.reveal-left.active{
+.reveal-left.active {
   transform: translateX(0);
   opacity: 1;
 }
 
-
-.reveal-right{
+.reveal-bottom {
   position: relative;
-  transform: translateX(2000px);
+  transform: translateY(20%);
   opacity: 0;
   transition: 1s all ease;
 }
 
-.reveal-right.active{
-  transform: translateX(0);
+.reveal-bottom.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.reveal-spin {
+  position: relative;
+  transform: rotate(-360deg);
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.reveal-spin.active {
+  transform: rotate(0);
+  opacity: 1;
+}
+
+
+.reveal-top {
+  position: relative;
+  transform: translateY(-20%);
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.reveal-top.active {
+  transform: translateY(0);
   opacity: 1;
 }
